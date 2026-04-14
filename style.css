@@ -1,0 +1,222 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+/* Контакты */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f7fafc;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border-left: 5px solid #4299e1;
+}
+
+.emoji {
+    font-size: 28px;
+    background: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-name {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.contact-phone {
+    color: #4299e1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Документы */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.doc-link {
+    background: #edf2f7;
+    padding: 12px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.doc-link:hover {
+    background: #4299e1;
+    color: white;
+    border-color: #2b6cb0;
+}
+
+.doc-link span {
+    font-size: 20px;
+}
+
+/* Wi-Fi блок */
+.highlight {
+    background: linear-gradient(to right, #ffffff, #fef9e7);
+    border: 2px solid #ecc94b;
+}
+
+.wifi-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wifi-info p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.hint {
+    color: #718096;
+    font-size: 0.9rem !important;
+    margin-top: 15px;
+}
+
+.qr-mock {
+    text-align: center;
+}
+
+/* Чек-лист */
+.tasks {
+    margin: 20px 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.task-item input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+    cursor: pointer;
+    accent-color: #48bb78;
+}
+
+.task-item label {
+    font-size: 1.1rem;
+    cursor: pointer;
+    flex: 1;
+}
+
+.completed-label {
+    text-decoration: line-through;
+    color: #a0aec0;
+}
+
+.reset-btn {
+    background: #e2e8f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1px solid #cbd5e0;
+}
+
+.reset-btn:hover {
+    background: #cbd5e0;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .wifi-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    .qr-mock {
+        margin-top: 20px;
+    }
+}

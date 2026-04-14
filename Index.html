@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 Семейный IT-помощник</title>
+    <!-- Подключаем файл стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Шапка: Оформлена строго, чтобы выглядело как "инструмент", а не просто открытка -->
+        <header>
+            <h1>🏠 Домашний узел связи</h1>
+            <p class="subtitle">Вся важная информация для семьи в одном месте. Больше не нужно искать бумажки!</p>
+        </header>
+
+        <!-- БЛОК 1: СРОЧНЫЕ КОНТАКТЫ (Польза для дома) -->
+        <section class="card">
+            <h2>📞 Срочные контакты</h2>
+            <div class="contacts-grid">
+                <div class="contact-item">
+                    <span class="emoji">🚰</span>
+                    <div>
+                        <div class="contact-name">Сантехник</div>
+                        <a href="tel:+79001234567" class="contact-phone">+7 (900) 123-45-67</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="emoji">⚡</span>
+                    <div>
+                        <div class="contact-name">Электрик</div>
+                        <a href="tel:+79007654321" class="contact-phone">+7 (900) 765-43-21</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="emoji">🏢</span>
+                    <div>
+                        <div class="contact-name">Управляющая компания</div>
+                        <a href="tel:+73452597895" class="contact-phone">+7 (3452) 59-78-95</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- БЛОК 2: ТЕХНИКА И ИНСТРУКЦИИ (Замена куче бумаг) -->
+       <div class="docs-grid">
+    <a href="docs/Bosh.pdf" target="_blank" class="doc-link">
+        <span>🧼</span> Стиральная машина Bosch
+    </a>
+    <a href="docs/Gefest.pdf" target="_blank" class="doc-link">
+        <span>🔥</span> Духовой шкаф Gefest
+    </a>
+    <a href="docs/Lg.pdf" target="_blank" class="doc-link">
+        <span>❄️</span> Холодильник LG
+    </a>
+    <a href="docs/gorenje.pdf" target="_blank" class="doc-link">
+        <span>🔥</span> Микроволновая печь gorenje
+    </a>
+</div>
+        </section>
+
+        <!-- БЛОК 3: WI-FI ДЛЯ ГОСТЕЙ (IT-фишка) -->
+        <section class="card highlight">
+            <h2>📶 Гостевой Wi-Fi</h2>
+            <div class="wifi-block">
+                <div class="wifi-info">
+                    <p><strong>Сеть:</strong> Ronina_Family</p>
+                    <p><strong>Пароль:</strong> 1020360</p>
+                    <p class="hint">Отсканируй код, чтобы подключиться сразу</p>
+                </div>
+                <div class="qr-mock">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=WIFI:T:WPA;S:Ronina_Family;P:1020360;;" 
+         alt="QR-код для подключения к Wi-Fi" 
+         style="width: 130px; height: 130px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 2px solid white;">
+    <p style="font-size: 12px; margin-top: 8px; font-weight: 500;">📱 Наведи камеру телефона</p>
+</div>
+            </div>
+        </section>
+
+        <!-- БЛОК 4: ИНТЕРАКТИВ "УТРЕННИЙ ЧЕК-ЛИСТ" (Доказательство улучшения жизни) -->
+        <section class="card">
+            <h2>✅ Утренняя проверка</h2>
+            <p>Отмечай дела, которые уже сделаны. Так вся семья знает, что дом готов к новому дню.</p>
+            
+            <div id="taskList" class="tasks">
+                <!-- Заполнится через JavaScript -->
+            </div>
+            <button id="resetTasksBtn" class="reset-btn">🔄 Сбросить на завтра</button>
+        </section>
+
+        <footer>
+            <p>🚀 Проект для конкурса «Участвуй всей семьёй». Улучшаем дом с помощью IT!</p>
+        </footer>
+    </div>
+
+    <!-- Подключаем JavaScript в конце body -->
+    <script src="script.js"></script>
+</body>
+</html>
